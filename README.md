@@ -1,3 +1,3 @@
 # vsh2-lokaverkefni
 
-Ólver og Fuad
+Óliver og Fuad
