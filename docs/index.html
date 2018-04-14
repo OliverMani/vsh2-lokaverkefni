@@ -1,26 +1,95 @@
+<!--
+	Ein hugmynd, kannski að setja inn snjó efst, þannig það snjóar, hugmynd samt... :)
+-->
+
 <!DOCTYPE html>
 <html>
 <head>
 	<title>Skálmöld og Sinfó</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<meta charset="utf-8">
+	<script type="text/javascript">
+		function sleep(millis){
+			var date = new Date();
+			var now = date.getMilliseconds();
+
+			while(new Date().getMilliseconds() - now < millis);
+		}
+	</script>
 </head>
 <body>
-	
-	<div class="intro">
+	<!-- FALIÐ (til hvers að sýna? :3)-->
+	<div style="display:none;">
+		<!-- JS elements (id er "BackGround Music" (bgm))-->
+		<audio src="audio/bg.mp3" loop="loop" id="bgm"></audio>
+		<script>
+			const audio = document.getElementById('bgm');
+			audio.volume = 0.2;
+			//audio.play();
+
+			function ts(f_audio, pause){
+				if(pause) {
+					f_audio.pause();
+				}
+				else {
+					f_audio.play();
+				}
+			}
+		</script>
+	</div>
+	<section class="intro">
 		<div class="settings">
 			
 		</div>
 		<input type="checkbox" name="m" id="menubox">
 		<label for="menubox" class="menubutton">=></label>
 		<div class="menu">
+			<script type="text/javascript">
+			   /*
+				*
+				*
+				*	HÉR ER BUGG SEM ÞARF AÐ LAGA
+				*
+				*
+				*/
+				function toggleAudioIcon(){
+					const icon = document.getElementById('audioIcon');
+					var paused = audio.paused;
 
-			<div class="Title Inline">
+					// Padding er eitthvað ekki aðveg í réttum hlutföllum
+					if(paused){
+						icon.innerHTML = "&#9658;";
+						icon.style.fontSize = "3em";
+						icon.style.padding = ".2em .2em .4em .4em";
+					}
+					else{
+						icon.innerHTML = "&#9612;&#9612;";
+						icon.style.fontSize = "2em";
+						icon.style.padding = ".4em .4em .8em .8em";
+					}
+				}
+
+			</script>
+			<div class="AudioManager" id="audioIcon" onclick="ts(audio, !audio.paused);toggleAudioIcon();">
+				&#9612;&#9612;
+			</div>
+			<div class="Title">
 				<h1>Skálmöld og sinfó</h1>
+			</div>
+			<div class="Buttons">
+				<ul>
+					<li><a href="https://example.com">Example</a></li>
+					<li><a href="https://example.com">Example</a></li>
+					<li><a href="https://example.com">Example</a></li>
+					<li><a href="https://example.com">Example</a></li>
+				</ul>
 			</div>
 		</div>
 
-	</div>
-	Scolled!
+	</section>
+	<section class="container">
+		Scolled!
+	</section>
+	
 </body>
 </html>

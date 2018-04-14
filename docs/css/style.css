@@ -47,12 +47,14 @@ body {
 	position: fixed;
 	font-family: NorseBold;
 	transition: all .3s;
-	content: "HI";
+	cursor: pointer;
 }
 
 #menubox:checked ~ .menubutton {
 	margin-left: 300px;
 	transition: all .5s;
+	color: #822;
+	transform: rotate(-180deg);
 }
 
 #menubox:checked ~ .menu {
@@ -60,13 +62,6 @@ body {
 	transition: all .5s;
 }
 
-.settings {
-	font-family: NorseBold;
-	/*font-size: 5em;*/
-	margin-left: 10px;
-	cursor: pointer;
-	position: absolute;
-}
 
 .Inline {
 	display: inline-block;
@@ -78,9 +73,32 @@ body {
 }
 
 
+/* Ekki setja inn style-list-type, það er flott að hafa inni punktanna í menu'inu */
+.Buttons a{
+	color: #333;
+	text-decoration: none;
+	font-size: 1.3em;
+}
 
+.Buttons a:hover {
+	text-decoration: underline;
+}
 
+.Buttons li{
+	padding: .3em;
+}
 
+.AudioManager {
+	top: 0;
+	right: 0;
+	position: fixed;
+	font-size: 2em;
+	padding: .4em;
+	cursor: pointer;
+	background-color: tomato;
+	border-bottom-left-radius: 50%;
+	transition: padding .3s;
+}
 
 
 
