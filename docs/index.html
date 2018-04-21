@@ -11,6 +11,7 @@ https://codepen.io/kevinpowell/pen/GrLKNo
 <head>
 	<title>Skálmöld og Sinfó</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/vawes.css">
 	<meta charset="utf-8">
 	<script type="text/javascript">
 		function sleep(millis){
@@ -98,8 +99,27 @@ https://codepen.io/kevinpowell/pen/GrLKNo
 		</div>
 
 	</section>
-	<div id="wave"></div>
+
+	
 	<section class="sea">
+		<div id="ocean"></div>
+		<script type="text/javascript">
+			var ocean = document.getElementById('ocean'),
+				width = 1,
+				count = Math.floor(window.innerWidth/width),
+				dfrag = document.createDocumentFragment();
+
+			
+			for(var i = 0; i < count; i++){
+			  var wave = document.createElement("div");
+			  wave.className += " wave";
+			  dfrag.appendChild(wave);
+			  wave.style.left = i * width + "px";
+			  wave.style.webkitAnimationDelay = (i/1000) + "s";
+			}
+
+			ocean.appendChild(dfrag);
+		</script>
 		<h1>Skálmöld og Sinfó</h1>
 		<p style="color: red;">Hugmynd um að koma upp öldum eins og að þetta div væri sjór.</p>
 	</section>
