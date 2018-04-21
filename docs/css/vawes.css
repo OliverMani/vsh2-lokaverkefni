@@ -8,9 +8,10 @@ body{
 
 #ocean{
   margin:0;
+  padding: 0;
   position:absolute;
   width:100%;
-  min-height:200px;
+  min-height:250px;
   /*background-image: -webkit-gradient(
   linear,
   left bottom,
@@ -21,7 +22,11 @@ body{
 }
 
 .wave{
-  background:#a8e3ff;
+  margin: 0;
+  /*background:#a8e3ff;
+    background:#585c5b;
+  */
+  background: linear-gradient(#585c5b, #a8e3ff);
   display:inline-block;
   height:60%;
   width:10px;
