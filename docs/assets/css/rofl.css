@@ -1,0 +1,29 @@
+/*
+Chrome er rusl þegar það kemur að snap scrolling
+
+*/
+
+html, body {
+	
+	/*height: 100%;
+	scroll-snap-points-y: repeat(140vh);
+	scroll-snap-type: mandatory;
+	scroll-snap-destination: 100% 0%;
+
+	-webkit-scroll-snap-points-y: repeat(140vh);
+	-webkit-scroll-snap-type: mandatory;
+	-webkit-scroll-snap-destination: 100% 0%;*/
+}
+
+html, body {
+	overflow-x: hidden;
+}
+
+.milli {
+	height: 40vh;
+	border-bottom: 1px solid;
+}
+
+.sc1 {
+	border-color: #585c5b;
+}

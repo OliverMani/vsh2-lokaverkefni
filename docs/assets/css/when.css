@@ -1,0 +1,20 @@
+body {
+	/*background-color: #4F9CB5;*/
+	background-color: #7CB9E8;
+}
+
+.intro {
+}
+
+.info {
+	position: absolute;
+	z-index: 998;
+}
+.up {
+	background-color: #585c5b;
+	margin: 0;
+}
+
+#all {
+	
+}

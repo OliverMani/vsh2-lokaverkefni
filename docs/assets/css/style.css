@@ -1,0 +1,128 @@
+@font-face {
+	src: url(../fonts/Norse-Bold.otf);
+	font-family: NorseBold;
+}
+
+@font-face {
+	src: url(../fonts/Norse.otf);
+	font-family: Norse;
+}
+
+body {
+	margin: 0;
+	overflow: scroll;
+	font-family: Norse;
+}
+
+h1 {
+	font-family: NorseBold;
+	font-size: 2em;
+}
+
+.all {
+	background-color: #76b6c4;
+	margin: 0;
+}
+
+.menu {
+	transition: all .3s;
+	top: 0;
+	height: 100%;
+	position: fixed;
+	
+	background: #aaa;
+	color: #333;
+	font-family: NorseBold;
+	padding: 0 50px;
+	padding-bottom: 5px;
+	display: inline;
+	margin-left: -25em;
+	z-index: 999;
+}
+
+.menubutton {
+	margin-left: 30px;
+	font-size: 5em;
+	z-index: 999;
+	position: fixed;
+	margin: 0;
+	font-family: NorseBold;
+	transition: all .3s;
+	cursor: pointer;
+
+}
+
+#menubox:checked ~ .menubutton {
+	margin-left: 300px;
+	transition: all .5s;
+	color: #822;
+	transform: rotate(-180deg);
+}
+
+#menubox:checked ~ .menu {
+	margin-left: -1.4em;
+	transition: all .5s;
+}
+
+
+.Inline {
+	display: inline-block;
+}
+
+#menubox {
+	font-size: 3em;
+	display: none;
+}
+
+
+/* Ekki setja inn style-list-type, það er flott að hafa inni punktanna í menu'inu */
+.Buttons a{
+	color: #333;
+	text-decoration: none;
+	font-size: 1.3em;
+}
+
+.Buttons a:hover {
+	text-decoration: underline;
+}
+
+.Buttons li{
+	padding: .3em;
+}
+
+.AudioManager {
+	padding: 0;
+	display: flex;
+	top: 0;
+	right: 0;
+	position: fixed;
+	font-size: 1.8em;
+	/*padding: .4em;*/
+	cursor: pointer;
+	background-color: tomato;
+	border-bottom-left-radius: 50%;
+	transition: padding .3s;
+	width: 80px;
+	height: 80px;
+	overflow: none;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+}
+
+
+section {
+	margin: 0;
+	height: 100vh;
+
+}
+
+.mk_scrollable {
+	width: 100%;
+	height: 40px;
+	margin: 0;
+}
+
+.mk_scrollable p {
+	margin: 0;
+}
