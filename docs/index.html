@@ -1,19 +1,15 @@
 <!--
-	Ein hugmynd, kannski að setja inn snjó efst, þannig það snjóar, hugmynd samt... :)
--->
-
-<!--
-Einhvað sem getur gert síðuna flottara
-https://codepen.io/kevinpowell/pen/GrLKNo
+	SCROLLING FEATURE VIRKAR BARA Á FIREFOX, VIÐ ÞURFUM AÐ LAGA ÞAÐ ÞANNIG AÐ ÞAÐ VIRKI LÍKA Á CHROME
 -->
 <!DOCTYPE html>
 <html>
 <head>
 	<title>Skálmöld og Sinfó</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<link rel="stylesheet" type="text/css" href="css/vawes.css">
+	<link rel="stylesheet" type="text/css" href="css/waves.css">
 	<link rel="stylesheet" type="text/css" href="css/rofl.css">
 	<meta charset="utf-8">
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript">
 		function sleep(millis){
 			var date = new Date();
@@ -26,8 +22,15 @@ https://codepen.io/kevinpowell/pen/GrLKNo
 		* HLEÐ SOUND EFFECTS
 		*/
 
-		const waves = new Audio("audio/waves.mp4");
+		const waves = new Audio("audio/waves.mp3");
 
+	</script>
+
+	<script type="text/javascript">
+		document.addEventListener('scroll', function(e){
+			var st = window.pageYOffset || document.documentElement.scrollTop;
+			console.log(e.clientY);
+		}, true);
 	</script>
 </head>
 <body>
