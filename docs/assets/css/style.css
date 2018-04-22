@@ -41,19 +41,21 @@ h1 {
 }
 
 .menubutton {
+	position: fixed;
+	margin: 0;
 	margin-left: 30px;
 	font-size: 5em;
 	z-index: 999;
-	position: fixed;
-	margin: 0;
+	
+	
 	font-family: NorseBold;
 	transition: all .3s;
 	cursor: pointer;
-
+	top: 0;
 }
 
 #menubox:checked ~ .menubutton {
-	margin-left: 300px;
+	margin-left: 330px;
 	transition: all .5s;
 	color: #822;
 	transform: rotate(-180deg);
