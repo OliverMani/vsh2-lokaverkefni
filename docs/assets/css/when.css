@@ -1,20 +1,73 @@
-body {
-	/*background-color: #4F9CB5;*/
-	background-color: #7CB9E8;
+@keyframes trans {
+	100% {
+		-webkit-transform: translateY(-40px);
+		transform: translateY(-40px); 
+	}
 }
 
-.intro {
+body {
+	/*background-color: #4F9CB5;*/
+
+
+	background: linear-gradient(to top, #445D70, #74A6CC);
+	
 }
+
 
 .info {
 	position: absolute;
 	z-index: 998;
-}
-.up {
-	background-color: #585c5b;
-	margin: 0;
+	margin: 20px;
+	margin-top: 10em;
+	color: white;
 }
 
+
 #all {
-	
+	padding: 0;
 }
+
+section {
+padding: 0;
+
+}
+
+.winfo {
+
+}
+
+
+
+@keyframes fljota {
+	0% {
+		
+	}
+
+	/*100% {
+		padding-bottom: 0px;
+	}*/
+}
+
+
+
+
+.intro {
+	padding-bottom: 100vh;
+	/*animation: 1s fljota;*/
+}
+
+.wave {
+	animation: 1s trans;
+}
+
+.up {
+	background: #585c5b;
+}
+
+.down {
+	animation: 1s syna;
+	bottom: 0;
+	padding-top: 40px;
+	height: 40px;
+}
+

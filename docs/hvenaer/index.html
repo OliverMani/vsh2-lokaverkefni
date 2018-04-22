@@ -17,12 +17,11 @@
 		<script>
 			document.getElementById('all').style.display = "block";
 		</script>
-		<div class="mk_scrollable up">
-			<center>Scrolled!</center>
-		</div>
+		<div class="mk_scrollable up"></div>
 	<section class="intro">
 		<input type="checkbox" name="m" id="menubox">
 		<label for="menubox" class="menubutton">=></label>
+		
 		<div id="ocean"></div>
 		<script type="text/javascript">
 			var ocean = document.getElementById('ocean'),
@@ -41,9 +40,10 @@
 			}
 			ocean.appendChild(dfrag);
 		</script>
-		<div class="winfo">
-			<h1>Skálmöld og Sinfó</h1>
-			<p style="color: red;">Hugmynd um að koma upp öldum eins og að þetta div væri sjór (added).</p>
+		<div class="info">
+			<h1>Hvenær eru tónleikarnir</h1>
+			<p>Þeir verða haldnir 24. og 25. ágúst, aukatónleikar eru þann 23. ágúst</p>
+			<p>HEY</p>
 		</div>
 		<div class="menu">
 			<script type="text/javascript">
@@ -54,7 +54,7 @@
 					const icon = document.getElementById('audioIcon');
 					var paused = audio.paused;
 
-					// Padding er eitthvað ekki aðveg í réttum hlutföllum
+					// Padding var eitthvað ekki alveg í réttum hlutföllum
 					if(paused){
 						icon.innerHTML = "&#9658;";
 						icon.style.fontSize = "3em";
@@ -76,8 +76,8 @@
 			</div>
 			<div class="Buttons">
 				<ul>
-					<li><a href="https://example.com">Example</a></li>
-					<li><a href="https://example.com">Example</a></li>
+					<li><a href="../skalmold/">Intro</a></li>
+					<li><a href="#">Hvenær eru tónleikarnir?</a></li>
 					<li><a href="https://example.com">Example</a></li>
 					<li><a href="https://example.com">Example</a></li>
 				</ul>
@@ -85,11 +85,38 @@
 		</div>
 
 	</section>
-	<div class="mk_scrollable down">
+
+	<!--<div class="mk_scrollable down">
 		<center>Scrolled!</center>
+	</div>-->
+	<div id="sbl">
+
 	</div>
 	<script type="text/javascript">
-		window.scrollTo(0, 40);
+		window.scrollTo(0, document.body.scrollHeight);
+		var sd = document.createElement('div');
+		sd.className = "mk_scrollable down";
+		document.getElementById('sbl').appendChild(sd);
+		
+		var i = document.body.scrollHeight;
+		var g = 100;
+		var hasScrolled = false;
+		waves.play();
+		setInterval(function(){
+			if(g > 0.5 && !hasScrolled){
+				i -= g;
+				window.scrollTo(0, i);
+				g -= g / 15;
+				console.log("Scrolled: " + g);
+			} else {
+				hasScrolled = true;
+				var intro = document.getElementsByClassName('intro')[0];
+
+			}
+		}, 1000/60);
+		
+
+
 		window.addEventListener('scroll', function(){
 			var y = window.pageYOffset;
 			if(y > 60){
@@ -97,9 +124,11 @@
 			}
 
 			if(y < 20){
-				//window.location.href = "../skalmold/index.html";
+				window.location.href = "../skalmold/index.html";
 			}
 		});
 	</script>
+	</div>
+
 </body>
 </html>
