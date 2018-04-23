@@ -40,12 +40,12 @@ padding: 0;
 
 @keyframes fljota {
 	0% {
-		
+		padding-bottom: 100vh;
 	}
 
-	/*100% {
+	100% {
 		padding-bottom: 0px;
-	}*/
+	}
 }
 
 
@@ -71,3 +71,30 @@ padding: 0;
 	height: 40px;
 }
 
+.box {
+	display: inline-block;
+	width: 100px;
+	height: 100px;
+	padding: 10px;
+	text-align: center;
+	line-height: 100px;
+	border-radius: 5px;
+	margin: 0 10px;
+	transition: .3s all;
+}
+
+.box:hover {
+	width: 200px;
+	transition: .7s all;
+}
+
+.black {
+	background: black;
+	cursor: pointer;
+}
+
+
+.red {
+	background: red;
+	cursor: not-allowed;
+}

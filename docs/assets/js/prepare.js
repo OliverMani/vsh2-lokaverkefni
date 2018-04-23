@@ -1,8 +1,12 @@
 /**
 * Þetta á að vera á hverri einustu síðu
 
-(Skrifa af Óliver Mána)
+(Skrifað af Óliver Mána)
+
+Þetta er gamla prepare...
 */
+
+
 
 function sleep(millis){
 	var date = new Date();
@@ -48,7 +52,9 @@ function getCookie(cname) {
 const audio = new Audio("../assets/audio/bg.mp3");
 const waves = new Audio("../assets/audio/waves.mp3");
 
+audio.preload = true;
 audio.loop = true;
+
 var cTime = getCookie("dur");
 
 audio.volume = 0.2;
