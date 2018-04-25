@@ -12,6 +12,7 @@
 </head>
 <body>
 	<noscript style="margin: 3em;">Javascript is required!</noscript>
+	<div id="blackCover"></div>
 	<div id="all" style="display: none;">
 		<script>
 			document.getElementById('all').style.display = "block";
@@ -38,6 +39,30 @@
 			  wave.style.webkitAnimationDelay = (i/100) + "s";
 			}
 			ocean.appendChild(dfrag);
+
+			function blackCover(goTo){
+				var cover = document.getElementById('blackCover');
+				cover.style.opacity = "0";
+				cover.style.display = "block";
+				var i = 0;
+				var opa = 0;
+				var scroll = 0;
+				var waiting = true;
+				var int = setInterval(function(){
+					if(i < 100){
+						opa += 0.01;
+						scroll += 5;
+						i++;
+						window.scrollTo(0, scroll);
+						cover.style.opacity = opa;
+					} else {
+						clearInterval(int);
+						window.location.href = goTo;
+					}
+				}, 1000/60);
+
+				
+			}
 		</script>
 		<div class="info">
 			<h1>Hvenær eru tónleikarnir</h1>
@@ -45,7 +70,7 @@
 			<p>HEY</p>
 			<h2>Upplýsingar</h2>
 			<div class="boxes">
-				<div class="box black" title="Upplýsingar">
+				<div class="box black" title="Upplýsingar" onclick="blackCover('../midar23/index.html');">
 					23. ÁGÚST
 				</div>
 				<div class="box red" title="Uppselt">
@@ -81,8 +106,7 @@
 			if(g > 0.5 && !hasScrolled){
 				i -= g;
 				window.scrollTo(0, i);
-				g -= g / 16;
-				console.log("Scrolled: " + g);
+				g -= g / (document.body.scrollHeight / 100);
 			} else {
 				hasScrolled = true;
 				var intro = document.getElementsByClassName('intro')[0];
@@ -108,6 +132,6 @@
 		});*/
 	</script>
 	</div>
-
+	
 </body>
 </html>
