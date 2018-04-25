@@ -48,13 +48,15 @@
 				var opa = 0;
 				var scroll = 0;
 				var waiting = true;
+				var speed = 5;
 				var int = setInterval(function(){
 					if(i < 100){
 						opa += 0.01;
-						scroll += 5;
+						scroll += speed;
 						i++;
 						window.scrollTo(0, scroll);
 						cover.style.opacity = opa;
+						speed += .1;
 					} else {
 						clearInterval(int);
 						window.location.href = goTo;
