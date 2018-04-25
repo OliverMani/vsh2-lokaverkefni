@@ -12,14 +12,22 @@
 			margin: 0;
 		}
 		iframe {
+			overflow: hidden;
 			border: 0;
 			overflow-y: auto;
 			width: 100%;
 			height: 100vh;
+
 		}
 	</style>
 
-
+	<script type="text/javascript">
+		function updateURI(url){
+			var href = window.location.href;
+			var now = href.substring(0, href.indexOf("#"));
+			window.location.href = now + "#" + url;
+		}
+	</script>
 </head>
 <body>
 	<script type="text/javascript">
@@ -101,7 +109,12 @@
 			gluggi.contentWindow.location.href = url + "/index.html";
 			document.getElementById('menubox').checked = false;
 		}
+
+		var url = window.location.href.split("#")[1];
+		if(url != undefined)
+			goTo(url);
 		
 	</script>
+	
 </body>
 </html>
