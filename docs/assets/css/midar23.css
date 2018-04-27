@@ -40,7 +40,6 @@ body {
 }
 
 .content {
-	margin: 12em;
 	margin-top: 7em;
 	padding: 1em;
 	font-size: 18px;
@@ -48,7 +47,22 @@ body {
 	background: white;
 	color: #333;
 	border-radius: 3px;
+	overflow-x: hidden;
 }
+
+@media screen and (min-width: 900px) {
+	.content {
+		margin: 12em;
+		margin-top: 7em;
+		padding: 1em;
+		font-size: 18px;
+		font-family: Montserrat, sans-serif;
+		background: white;
+		color: #333;
+		border-radius: 3px;
+	}
+}
+
 
 body {
 	display: table;

@@ -5,6 +5,8 @@
 	<title>Skálmöld og sinfó</title>
 	<script type="text/javascript" src="assets/js/prepare2.js"></script>
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
 	<meta charset="utf-8">
 	<style type="text/css">
 		body{
@@ -70,12 +72,10 @@
 				if(paused){
 					icon.innerHTML = "&#9658;";
 					icon.style.fontSize = "3em";
-					//icon.style.padding = ".2em .2em .4em .4em";
 				}
 				else{
 					icon.innerHTML = "&#9612;&#9612;";
 					icon.style.fontSize = "2em";
-					//icon.style.padding = ".4em .4em .8em .8em";
 				}
 			}
 
@@ -90,16 +90,11 @@
 			<ul>
 				<li><a href="#skalmold" onclick="goTo('skalmold');">Intro</a></li>
 				<li><a href="#hvenaer" onclick="goTo('hvenaer');">Hvenær eru tónleikarnir?</a></li>
-				<li><a href="https://example.com">Example</a></li>
-				<li><a href="https://example.com">Example</a></li>
+				<li><a href="#midar23" onclick="goTo('midar23');">Kaupa miða</a></li>
+				<li><a href="http://skalmold.is">Skálmöld.is</a></li>
 			</ul>
 		</div>
 	</div>
-	<!--<script type="text/javascript">
-		const testing = true;
-		const url = testing ? "skalmold/index.html" : "skalmold/";
-		window.location.href = url;
-	</script>-->
 
 	<iframe src="skalmold/index.html" id="gluggi"></iframe>
 
