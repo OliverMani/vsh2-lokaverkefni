@@ -1,3 +1,8 @@
+@font-face {
+	src: url(../fonts/Montserrat-Regular.ttf);
+	font-family: Montserrat;
+}
+
 @keyframes syna {
 	0% {
 		opacity: 0;
@@ -12,14 +17,51 @@
 	animation: 1s syna;
 }
 
+@keyframes bakgrunnur {
+	0% {
+		background: black;
+	}
+
+	100% {
+		background: linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)  ), url(../img/topmenu.jpg);
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-attachment: fixed;
+	}
+}
+
+* {
+	animation: 1s syna;
+}
+
 body {
-	background-color: black;
-	color: white;
-	margin: 0;
+	animation: 1s bakgrunnur;
 }
 
 .content {
+	margin: 12em;
 	margin-top: 7em;
+	padding: 1em;
+	font-size: 18px;
+	font-family: Montserrat, sans-serif;
+	background: white;
+	color: #333;
+	border-radius: 3px;
+}
+
+body {
+	display: table;
+	width: 100%;
+	height: 100vh;
+	background: linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)  ), url(../img/topmenu.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-attachment: fixed;
+	margin: 0;
+	transition: all .3s;
+	color: #333;
 }
 
 .horn {
@@ -29,4 +71,43 @@ body {
 	border-bottom-right-radius: 20px;
 	position: fixed;
 	top: 0;
+}
+
+.takki {
+	cursor: pointer;
+	width: 200px;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	border-radius: 3px;
+}
+
+.raudur {
+	background-color: tomato;
+	border: 2px solid #f00;
+	color: white;
+	transition: .4s all;
+}
+
+.raudur:hover {
+	background-color: #E85243;
+	transition: .7s all;
+}
+
+.nidri {
+	display: inline-block;
+	margin-left: 16px;
+}
+
+.vinstri {
+	float: left;
+}
+
+.haegri {
+	float: right;
+	margin: 1em 0 0 15em;
+}
+
+a {
+	text-decoration: none;
 }
