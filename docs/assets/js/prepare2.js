@@ -17,7 +17,7 @@ audio.loop = true;
 
 audio.volume = 0.2;
 
-//audio.play();
+audio.play();
 // Toggle Sound
 function ts(f_audio, pause){
 	if(pause) {
